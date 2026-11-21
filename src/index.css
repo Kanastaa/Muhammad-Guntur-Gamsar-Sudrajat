@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-on-secondary-container: #b7b4b7;
+  --color-on-primary: #650a00;
+  --color-on-primary-container: #590700;
+  --color-surface-bright: #3a3939;
+  --color-outline-variant: #5f3f38;
+  --color-on-primary-fixed-variant: #8f1200;
+  --color-tertiary: #c8c5ca;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-surface-container: #201f1f;
+  --color-error: #ffb4ab;
+  --color-surface-variant: #353534;
+  --color-on-tertiary: #303033;
+  --color-on-surface-variant: #e9bcb3;
+  --color-outline: #b0877f;
+  --color-surface-tint: #ffb4a5;
+  --color-surface-container-highest: #353534;
+  --color-on-tertiary-fixed: #1b1b1e;
+  --color-primary-container: #ff5638;
+  --color-surface-container-high: #2a2a2a;
+  --color-secondary: #c8c6c8;
+  --color-surface-container-low: #1c1b1b;
+  --color-on-primary-fixed: #3f0400;
+  --color-background: #131313;
+  --color-secondary-container: #474649;
+  --color-surface: #131313;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-secondary: #313032;
+  --color-tertiary-fixed: #e4e1e6;
+  --color-on-tertiary-fixed-variant: #47464a;
+  --color-secondary-fixed: #e5e1e4;
+  --color-on-secondary-fixed: #1b1b1d;
+  --color-inverse-primary: #ba1b00;
+  --color-surface-dim: #131313;
+  --color-inverse-on-surface: #313030;
+  --color-on-surface: #e5e2e1;
+  --color-secondary-fixed-dim: #c8c6c8;
+  --color-on-secondary-fixed-variant: #474649;
+  --color-on-tertiary-container: #2a292d;
+  --color-tertiary-container: #929094;
+  --color-on-background: #e5e2e1;
+  --color-primary-fixed-dim: #ffb4a5;
+  --color-primary-fixed: #ffdad3;
+  --color-tertiary-fixed-dim: #c8c5ca;
+  --color-primary: #ffb4a5;
+  --color-on-error-container: #ffdad6;
+  --color-rosso: #ff2800;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-sm: 1rem;
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1.25rem;
+
+  --font-display-xl: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-sm: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-telemetry-lg: "JetBrains Mono", ui-monospace, monospace;
+  --font-telemetry-md: "JetBrains Mono", ui-monospace, monospace;
+  --font-label-badge: "JetBrains Mono", ui-monospace, monospace;
+  --font-label-caption: "JetBrains Mono", ui-monospace, monospace;
+
+  --text-display-xl: 4.5rem;
+  --text-display-xl--line-height: 4.75rem;
+  --text-display-xl--letter-spacing: -0.04em;
+
+  --text-display-xl-mobile: 2.75rem;
+  --text-display-xl-mobile--line-height: 3rem;
+  --text-display-xl-mobile--letter-spacing: -0.03em;
+
+  --text-headline-lg: 3rem;
+  --text-headline-lg--line-height: 3.5rem;
+  --text-headline-lg--letter-spacing: -0.03em;
+
+  --text-headline-md: 2rem;
+  --text-headline-md--line-height: 2.5rem;
+  --text-headline-md--letter-spacing: -0.02em;
+
+  --text-headline-sm: 1.375rem;
+  --text-headline-sm--line-height: 1.75rem;
+  --text-headline-sm--letter-spacing: -0.01em;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.75rem;
+
+  --text-body-md: 0.9375rem;
+  --text-body-md--line-height: 1.5rem;
+
+  --text-body-sm: 0.8125rem;
+  --text-body-sm--line-height: 1.25rem;
+  --text-body-sm--letter-spacing: 0.01em;
+
+  --text-telemetry-lg: 1.5rem;
+  --text-telemetry-lg--line-height: 1.875rem;
+  --text-telemetry-lg--letter-spacing: -0.02em;
+
+  --text-telemetry-md: 0.875rem;
+  --text-telemetry-md--line-height: 1.25rem;
+  --text-telemetry-md--letter-spacing: 0.02em;
+
+  --text-label-badge: 0.6875rem;
+  --text-label-badge--line-height: 0.875rem;
+  --text-label-badge--letter-spacing: 0.08em;
+
+  --text-label-caption: 0.625rem;
+  --text-label-caption--line-height: 0.75rem;
+  --text-label-caption--letter-spacing: 0.1em;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: #131313;
+    color: #e5e2e1;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
